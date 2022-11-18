@@ -10,84 +10,94 @@ router = APIRouter(
 # Restaurant 
 res_db = [
     {   #1
-        "name" : "น้าไก่ไข่นุ่ม",
-        "location" : "ซอยเกกี 1",
-        "ประเภทอาหาร" : "อาหารญี่ปุ่น",
-        "เมนูแนะนำ" : "ข้าวหมูทอดไข่นุ่ม , ข้าวห่อสาหร่าย",
-        "เวลาเปิด-ปิด" : "17:00 – 22:00",
-        "เบอร์โทรติดต่อ"  : "087 673 3844"
+        "rest_id": "1",
+        "rest_name" : "น้าไก่ไข่นุ่ม",
+        "rest_location" : "ซอยเกกี 1",
+        "rest_type" : "อาหารญี่ปุ่น",
+        "rest_menu" : "ข้าวหมูทอดไข่นุ่ม , ข้าวห่อสาหร่าย",
+        "rest_timeopen" : "17:00 – 22:00",
+        "rest_tel"  : "087 673 3844"
     },
     {   #2
-        "name" : "chefcommady",
-        "location" : "ซอยเกกี 2",
-        "ประเภทอาหาร" : "อาหารจานเดียว",
-        "เมนูแนะนำ" : "เบอร์เกอร์, แกงกะหรี่, สปาเก็ตตี้",
-        "เวลาเปิด-ปิด" : "8:30 – 24:00",
-        "เบอร์โทรติดต่อ"  : "090 699 4636"
+        "rest_id": "2",
+        "rest_name" : "chefcommady",
+        "rest_location" : "ซอยเกกี 2",
+        "rest_type" : "อาหารจานเดียว",
+        "rest_menu" : "เบอร์เกอร์, แกงกะหรี่, สปาเก็ตตี้",
+        "rest_timeopen" : "8:30 – 24:00",
+        "rest_tel"  : "090 699 4636"
     },
     {   #3
-        "name" : "กะเพราบิลเลี่ยน",
-        "location" : "Billion Park",
-        "ประเภทอาหาร" : "อาหารไทย",
-        "เมนูแนะนำ" : "กะเพรา",
-        "เวลาเปิด-ปิด" : "16:30 – 4:00",
-        "เบอร์โทรติดต่อ"  : "082 998 9405"
+        "rest_id": "3",
+        "rest_name" : "กะเพราบิลเลี่ยน",
+        "rest_location" : "Billion Park",
+        "rest_type" : "อาหารไทย",
+        "rest_menu" : "กะเพรา",
+        "rest_timeopen" : "16:30 – 4:00",
+        "rest_tel"  : "082 998 9405"
     },
     {   #4
-        "name" : "ข้าวมันไก่ป้าน้อย",
-        "location" : "Billion Park",
-        "ประเภทอาหาร" : "อาหารตามสั่ง",
-        "เมนูแนะนำ" : "ข้าวหมกไก่",
-        "เวลาเปิด-ปิด" : "10:00 – 2:00",
-        "เบอร์โทรติดต่อ"  : "088 623 9575, 063 676 7335"
+        "rest_id": "4",
+        "rest_name" : "ข้าวมันไก่ป้าน้อย",
+        "rest_location" : "Billion Park",
+        "rest_type" : "อาหารตามสั่ง",
+        "rest_menu" : "ข้าวหมกไก่",
+        "rest_timeopen" : "10:00 – 2:00",
+        "rest_tel"  : "088 623 9575, 063 676 7335"
     },
     {   #5
-        "name" : "ไก่ทอดไฮโซ",
-        "location" : "499 ซอยฉลองกรุง 1",
-        "ประเภทอาหาร" : "Street food, Fast food",
-        "เมนูแนะนำ" : "ไก่ทอด",
-        "เวลาเปิด-ปิด" : "10:00 – 17:30",
-        "เบอร์โทรติดต่อ"  : "088 918 2062"
+        "rest_id": "5",
+        "rest_name" : "ไก่ทอดไฮโซ",
+        "rest_location" : "499 ซอยฉลองกรุง 1",
+        "rest_type" : "Street food, Fast food",
+        "rest_menu" : "ไก่ทอด",
+        "rest_timeopen" : "10:00 – 17:30",
+        "rest_tel"  : "088 918 2062"
     },
     {   #6
-        "name" : "นมมหาลัย",
-        "location" : "Billion Park",
-        "ประเภทอาหาร" : "ขนมหวาน, เครื่องดื่ม",
-        "เมนูแนะนำ" : "โกโก้นมสดปั่น, ไอติมทอด",
-        "เวลาเปิด-ปิด" : "17:00 – 23:30",
-        "เบอร์โทรติดต่อ"  : "098 829 8780"
+        "rest_id": "6",
+        "rest_name" : "นมมหาลัย",
+        "rest_location" : "Billion Park",
+        "rest_type" : "ขนมหวาน, เครื่องดื่ม",
+        "rest_menu" : "โกโก้นมสดปั่น, ไอติมทอด",
+        "rest_timeopen" : "17:00 – 23:30",
+        "rest_tel"  : "098 829 8780"
     },
     {   #7
-        "name" : "Dimple coffee",
-        "location" : "ซอยRNP",
-        "ประเภทอาหาร" : "Coffee shop",
-        "เมนูแนะนำ" : "นมสดคาราเมล, ปังปิ้ง",
-        "เวลาเปิด-ปิด" : "10:00 – 19:00",
-        "เบอร์โทรติดต่อ"  : "090 699 4636"
+        "rest_id": "7",
+        "rest_name" : "Dimple coffee",
+        "rest_location" : "ซอยRNP",
+        "rest_type" : "Coffee shop",
+        "rest_menu" : "นมสดคาราเมล, ปังปิ้ง",
+        "rest_timeopen" : "10:00 – 19:00",
+        "rest_tel"  : "090 699 4636"
     },
     {   #8
-        "name" : "ไข่หวานบ้านซูชิ",
-        "location" : "College Town",
-        "ประเภทอาหาร" : "อาหารญี่ปุ่น",
-        "เมนูแนะนำ" : "ซูชิ, แซลม่อน",
-        "เวลาเปิด-ปิด" : "12:00 – 22:00",
-        "เบอร์โทรติดต่อ"  : "083 788 4380"
+        "rest_id": "8",
+        "rest_name" : "ไข่หวานบ้านซูชิ",
+        "rest_location" : "College Town",
+        "rest_type" : "อาหารญี่ปุ่น",
+        "rest_menu" : "ซูชิ, แซลม่อน",
+        "rest_timeopen" : "12:00 – 22:00",
+        "rest_tel"  : "083 788 4380"
     },
     {   #9
-        "name" : "Long-Kin (กะเพราไข่ข้นชีสลาวา)",
-        "location" : "ซอยเกกี 4",
-        "ประเภทอาหาร" : "อาหารไทย",
-        "เมนูแนะนำ" : "กะเพราไข่ข้นชีสลาวา",
-        "เวลาเปิด-ปิด" : "12:00 - 21:00",
-        "เบอร์โทรติดต่อ"  : "085 727 7702 "
+        "rest_id": "9",
+        "rest_name" : "Long-Kin (กะเพราไข่ข้นชีสลาวา)",
+        "rest_location" : "ซอยเกกี 4",
+        "rest_type" : "อาหารไทย",
+        "rest_menu" : "กะเพราไข่ข้นชีสลาวา",
+        "rest_timeopen" : "12:00 - 21:00",
+        "rest_tel"  : "085 727 7702 "
     },
     {   #10
-        "name" : "หอมมนต์ (เตี๋ยวเรือต่อชาม)",
-        "location" : "ซอยเกกี 4",
-        "ประเภทอาหาร" : "ก๋วยเตี๋ยว",
-        "เมนูแนะนำ" : "ก๋วยเตี๋ยวเรือ",
-        "เวลาเปิด-ปิด" : "09:30 - 22:00",
-        "เบอร์โทรติดต่อ"  : "090 969 0502"
+        "rest_id": "10",
+        "rest_name" : "หอมมนต์ (เตี๋ยวเรือต่อชาม)",
+        "rest_location" : "ซอยเกกี 4",
+        "rest_type" : "ก๋วยเตี๋ยว",
+        "rest_menu" : "ก๋วยเตี๋ยวเรือ",
+        "rest_timeopen" : "09:30 - 22:00",
+        "rest_tel"  : "090 969 0502"
     }
 ]
 
@@ -117,7 +127,7 @@ async def get_rest_name(rest_name : str):
     count = -1
     for i in res_db:
         count = count + 1
-        if i.get("name") == rest_name:
+        if i.get("rest_name") == rest_name:
             # pretty print dictionary [ref: https://datagy.io/python-pretty-print-dictionary/]
             pprint.pprint(res_db[count])
             return res_db[count]
@@ -132,16 +142,15 @@ async def get_rest_location(rest_location : str):
 
     for i in res_db:
         count = count + 1
-        if i.get("location") == rest_location:
-            # pretty print dictionary [ref: https://datagy.io/python-pretty-print-dictionary/]
+        if i.get("rest_location") == rest_location:
             data.append(res_db[count])
 
     pprint.pprint(data)
     return {"response": data}  
     
 
-@router.get("/{green_res}")
-async def get_green_res(green_res : str):
-    green_res = "Mr. " + green_res;
-    print("console green_res is " + green_res)
-    return {"response": green_res};
+@router.get("/{token}")
+async def get_token(token : str):
+    token = "Mr. " + token;
+    print("console token is " + token)
+    return {"response": token};
