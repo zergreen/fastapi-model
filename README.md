@@ -17,19 +17,20 @@ uvicorn main:app
 ```
 
 # Run with Docker
-build and run
+- build and run image <br>
 ```bash
 docker build -t fast .
 
 docker run --name cont-fast -p 80:80 fast
 ```
+form above after this step you can go to browser then type your url with [http://localhost:80](http://localhost:80) <br>
 
-start container and show log with
+- start container and show log with
 ```bash
 docker start cont-fast -a
 ```
 
-if satify stop your container with
+- if satify stop your container with
 ```bash
 docker stop cont-fast
 ```
