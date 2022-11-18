@@ -1,7 +1,8 @@
+import pprint
 res_db = [
     {   #1
         "name" : "น้าไก่ไข่นุ่ม",
-        "ที่ตั้ง" : "ซอยเกกี 1",
+        "location" : "ซอยเกกี 1",
         "ประเภทอาหาร" : "อาหารญี่ปุ่น",
         "เมนูแนะนำ" : "ข้าวหมูทอดไข่นุ่ม , ข้าวห่อสาหร่าย",
         "เวลาเปิด-ปิด" : "17:00 – 22:00",
@@ -9,7 +10,7 @@ res_db = [
     },
     {   #2
         "name" : "chefcommady",
-        "ที่ตั้ง" : "ซอยเกกี 2",
+        "location" : "ซอยเกกี 2",
         "ประเภทอาหาร" : "อาหารจานเดียว",
         "เมนูแนะนำ" : "เบอร์เกอร์, แกงกะหรี่, สปาเก็ตตี้",
         "เวลาเปิด-ปิด" : "8:30 – 24:00",
@@ -17,7 +18,7 @@ res_db = [
     },
     {   #3
         "name" : "กะเพราบิลเลี่ยน",
-        "ที่ตั้ง" : "Billion Park",
+        "location" : "Billion Park",
         "ประเภทอาหาร" : "อาหารไทย",
         "เมนูแนะนำ" : "กะเพรา",
         "เวลาเปิด-ปิด" : "16:30 – 4:00",
@@ -25,7 +26,7 @@ res_db = [
     },
     {   #4
         "name" : "ข้าวมันไก่ป้าน้อย",
-        "ที่ตั้ง" : "Billion Park",
+        "location" : "Billion Park",
         "ประเภทอาหาร" : "อาหารตามสั่ง",
         "เมนูแนะนำ" : "ข้าวหมกไก่",
         "เวลาเปิด-ปิด" : "10:00 – 2:00",
@@ -33,7 +34,7 @@ res_db = [
     },
     {   #5
         "name" : "ไก่ทอดไฮโซ",
-        "ที่ตั้ง" : "499 ซอยฉลองกรุง 1",
+        "location" : "499 ซอยฉลองกรุง 1",
         "ประเภทอาหาร" : "Street food, Fast food",
         "เมนูแนะนำ" : "ไก่ทอด",
         "เวลาเปิด-ปิด" : "10:00 – 17:30",
@@ -41,7 +42,7 @@ res_db = [
     },
     {   #6
         "name" : "นมมหาลัย",
-        "ที่ตั้ง" : "Billion Park",
+        "location" : "Billion Park",
         "ประเภทอาหาร" : "ขนมหวาน, เครื่องดื่ม",
         "เมนูแนะนำ" : "โกโก้นมสดปั่น, ไอติมทอด",
         "เวลาเปิด-ปิด" : "17:00 – 23:30",
@@ -49,7 +50,7 @@ res_db = [
     },
     {   #7
         "name" : "Dimple coffee",
-        "ที่ตั้ง" : "ซอยRNP",
+        "location" : "ซอยRNP",
         "ประเภทอาหาร" : "Coffee shop",
         "เมนูแนะนำ" : "นมสดคาราเมล, ปังปิ้ง",
         "เวลาเปิด-ปิด" : "10:00 – 19:00",
@@ -57,7 +58,7 @@ res_db = [
     },
     {   #8
         "name" : "ไข่หวานบ้านซูชิ",
-        "ที่ตั้ง" : "College Town",
+        "location" : "College Town",
         "ประเภทอาหาร" : "อาหารญี่ปุ่น",
         "เมนูแนะนำ" : "ซูชิ, แซลม่อน",
         "เวลาเปิด-ปิด" : "12:00 – 22:00",
@@ -65,7 +66,7 @@ res_db = [
     },
     {   #9
         "name" : "Long-Kin (กะเพราไข่ข้นชีสลาวา)",
-        "ที่ตั้ง" : "ซอยเกกี 4",
+        "location" : "ซอยเกกี 4",
         "ประเภทอาหาร" : "อาหารไทย",
         "เมนูแนะนำ" : "กะเพราไข่ข้นชีสลาวา",
         "เวลาเปิด-ปิด" : "12:00 - 21:00",
@@ -73,7 +74,7 @@ res_db = [
     },
     {   #10
         "name" : "หอมมนต์ (เตี๋ยวเรือต่อชาม)",
-        "ที่ตั้ง" : "ซอยเกกี 4",
+        "location" : "ซอยเกกี 4",
         "ประเภทอาหาร" : "ก๋วยเตี๋ยว",
         "เมนูแนะนำ" : "ก๋วยเตี๋ยวเรือ",
         "เวลาเปิด-ปิด" : "09:30 - 22:00",
@@ -81,23 +82,48 @@ res_db = [
     }
 ]
 
-print('helloworld')
+def getName():
+    print('helloworld')
 
-green = "chefcommady"
+    green = "chefcommady"
 
-print(green)
-count = 0
+    print(green)
+    count = 0
 
-for i in res_db:
-    print(i.get("name"));
-    count = count + 1
-    print(count)
-    if i.get("name") == green:
-        print("your are reach")
-        print(i.items())    
-        print(res_db[len(i)])
+    for i in res_db:
+        print(i.get("name"));
+        count = count + 1
         print(count)
-        print(res_db[count])
-        break;
+        if i.get("name") == green:
+            print("your are reach")
+            print(i.items())    
+            print(res_db[len(i)])
+            print(count)
+            print(res_db[count])
+            break;
 
-print(res_db[1])
+    return print(res_db[1])
+
+# getName()
+
+def getFromLocation():
+    print('you come get from location')
+
+    token = "ซอยเกกี 4"
+
+    print(token)
+    count = -1
+
+    data = []
+
+    for i in res_db:
+        print(i.get("name"));
+        count = count + 1
+        print(count)
+        if i.get("location") == token:
+            print("your are reach")
+            data.append(res_db[count])
+
+    return pprint.pprint(data)
+
+getFromLocation()
