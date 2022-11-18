@@ -23,7 +23,7 @@ docker build -t fast .
 
 docker run --name cont-fast -p 80:80 fast
 ```
-form above after this step you can go to browser then type your url with [http://localhost:80](http://localhost:80/) <br>
+form above after this step you can go to browser then type your url with [http://localhost:80/docs](http://localhost:80/docs) <br>
 
 - start container and show log with
 ```bash
