@@ -1,11 +1,13 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from routers import restaurant
+from routers import restaurant, file
 from fastapi.middleware.cors import CORSMiddleware
+
 
 app = FastAPI()
 
 app.include_router(restaurant.router)
+app.include_router(file.router)
 
 @app.get("/")
 async def root():

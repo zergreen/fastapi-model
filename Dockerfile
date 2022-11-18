@@ -11,7 +11,7 @@ COPY ./requirements.txt /code/requirements.txt
 COPY . /code
 
 # install program
-RUN apk add ncdu git python3 py3-pip
+RUN apk add python3 py3-pip
 
 # install fastapi package
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
