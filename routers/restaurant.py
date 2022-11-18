@@ -2,7 +2,7 @@ from fastapi import APIRouter
 import pprint
 
 router = APIRouter(
-    prefix = "/ร้านอาหาร",
+    prefix = "/restaurant",
     tags = ["Restaurant"],
     responses = {404: {"message" : "Not found"}}
 )
