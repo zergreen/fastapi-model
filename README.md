@@ -37,6 +37,6 @@ docker stop cont-fast
 
 Go to your browser with url
 ```bash
-http://localhost:80/
+http://localhost:80/docs/
 ```
 
